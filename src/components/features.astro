@@ -4,55 +4,43 @@ import { Icon } from "astro-icon/components";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Gemütliche Atmosphäre",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Genießt entspannte Abende in unserer einladenden Bar - perfekt, um nach einem langen Tag abzuschalten oder neue Leute kennenzulernen.",
+    icon: "bx:bxs-coffee",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Kicker & Darts",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Fordert eure Freunde zu einer Runde Kicker oder Darts heraus und sorgt für eine Extraportion Spaß an euren Abenden.",
+    icon: "bx:bxs-game",
   },
   {
-    title: "On-Demand Components",
+    title: "Günstige Getränke",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Von Bier bis Softdrinks - bei uns gibt's erfrischende Getränke zu studentischen Preisen, perfekt für den kleinen Geldbeutel.",
+    icon: "bx:bxs-beer",
   },
   {
-    title: "Broad Integration",
+    title: "Offen für alle",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Ob Studierende oder Gäste - bei uns ist jeder willkommen! Kommt vorbei und erlebt eine inklusive Atmosphäre, in der sich jeder wohlfühlt.",
+    icon: "bx:bxs-group",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Deine neue Lieblingsbar
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Ob ihr Lust auf eine Runde Kicker, Darts habt oder einfach nur mit Freunden bei einem kühlen Getränk abhängen wollt,<wbr/>
+    bei uns seid ihr genau richtig. 🍻
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+<div class="grid sm:grid-cols-2 md:grid-cols-2 mt-16 gap-16">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start">
