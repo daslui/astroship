@@ -9,7 +9,7 @@ const menuitems = [
     title: "Features",
     path: "#",
     children: [
-      { title: "Action", path: "/" },
+      { title: "Action", path: "#" },
       { title: "Another action", path: "#" },
       { title: "Dropdown Submenu", path: "#" },
       { title: "404 Page", path: "/404" },
@@ -38,11 +38,11 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
+        <Link href="/" internal={true} class="text-lg" style="none"
           >
            <span class="text-slate-400">Das</span>
           <span class="font-bold text-slate-200">Lui</span>
-        </a>
+      </Link>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-200" />
         </div>
@@ -62,8 +62,8 @@ const menuitems = [
 
                 {!item.children && (
                   <li>
-                    <a
-                      href={item.path}
+                    <Link
+                      href={item.path} internal={true} style="none"
                       class="flex lg:px-3 py-2 items-center text-gray-400 hover:text-gray-100">
                       <span> {item.title}</span>
                       {item.badge && (
@@ -71,7 +71,7 @@ const menuitems = [
                           New
                         </span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 )}
               </>
