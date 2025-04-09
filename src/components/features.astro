@@ -2,32 +2,9 @@
 // @ts-ignore
 import { Icon } from "astro-icon/components";
 
-const features = [
-  {
-    title: "Gemütliche Atmosphäre",
-    description:
-      "Genießt entspannte Abende in unserer einladenden Bar - perfekt, um nach einem langen Tag abzuschalten oder neue Leute kennenzulernen.",
-    icon: "bx:bxs-coffee",
-  },
-  {
-    title: "Kicker & Darts",
-    description:
-      "Fordert eure Freunde zu einer Runde Kicker oder Darts heraus und sorgt für eine Extraportion Spaß an euren Abenden.",
-    icon: "bx:bxs-game",
-  },
-  {
-    title: "Günstige Getränke",
-    description:
-      "Von Bier bis Softdrinks - bei uns gibt's erfrischende Getränke zu studentischen Preisen, perfekt für den kleinen Geldbeutel.",
-    icon: "bx:bxs-beer",
-  },
-  {
-    title: "Offen für alle",
-    description:
-      "Ob Studierende oder Gäste - bei uns ist jeder willkommen! Kommt vorbei und erlebt eine inklusive Atmosphäre, in der sich jeder wohlfühlt.",
-    icon: "bx:bxs-group",
-  },
-];
+const { features } = Astro.props;
+
+// const ;
 ---
 
 <div class="mt-16 md:mt-0">

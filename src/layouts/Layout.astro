@@ -6,7 +6,7 @@ import "@fontsource-variable/inter/index.css";
 import '@fontsource-variable/bricolage-grotesque';
 import './src/styles/global.css'
 
-
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 export interface Props {
   title: string;
@@ -20,14 +20,16 @@ const resolvedImageWithDomain = new URL(
 ).toString();
 
 const { title } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const makeTitle = title
-  ? title + " | " + "Das Lui"
-  : "Das Lui";
+  ? title + " | " + t('site.titlename')
+  : t('site.titlename');
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
