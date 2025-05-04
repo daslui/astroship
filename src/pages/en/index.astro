@@ -27,18 +27,14 @@ import { Icon } from "astro-icon/components";
     <div>
       <h1
         class="text-slate-200 text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-        Das Lui - Eure Bar im Luisental!
+        The Lui - Your Bar in Luisental!
       </h1>
       <p class="text-lg mt-4 text-slate-300 max-w-xl">
-        Willkommen im Das Lui, eurem gemütlichen Treffpunkt im Studentenwohnheim Luisental in Bremen!
-      </p>
-      <p class="text-lg mt-4 text-slate-300 max-w-xl">
-        Ob ihr Lust auf eine Runde Kicker, Darts habt oder einfach nur mit Freunden bei einem kühlen Getränk abhängen wollt,<wbr/>
-        bei uns seid ihr genau richtig. 🍻
+        Welcome to Das Lui, your cozy corner in the Luisental student residence in Bremen! 🌟
       </p>
       <div class="mt-6 flex flex-col sm:flex-row gap-3">
         <Link
-          href="/pricing"
+          href="/pricings"
           internal={true}
           target="_blank"
           target=""
@@ -64,9 +60,10 @@ import { Icon } from "astro-icon/components";
     </div>
     </main>
 
+
     <Features features={ [
       {
-        title: "Gemütliche Atmosphäre",
+        title: "Cozy Atmosphere",
         description:
           "Genießt entspannte Abende in unserer einladenden Bar - perfekt, um nach einem langen Tag abzuschalten oder neue Leute kennenzulernen.",
         icon: "bx:bxs-coffee",
@@ -90,6 +87,7 @@ import { Icon } from "astro-icon/components";
         icon: "bx:bxs-group",
       },
     ]} />
+    <!-- <Logos /> -->
     <Cta />
   </Container>
 </Layout>
