@@ -2,6 +2,7 @@ backend:
   name: github
   repo: "daslui/astroship"
   branch: "main"
+  base_url: https://cmsproxy.luisental.org
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
