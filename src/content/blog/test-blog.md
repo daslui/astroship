@@ -12,4 +12,4 @@ tags:
   - Stair News
   - Tags
 ---
-
+This is the blog text
