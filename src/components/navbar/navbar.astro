@@ -4,10 +4,11 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { getRelativeLocaleUrl } from 'astro:i18n';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { useTranslations } from '../../i18n/utils';
+import type { ui } from "i18n/ui";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = Astro.currentLocale ?? "";
+const t = useTranslations(lang as keyof typeof ui);
 
 const menuitems = [
   {
