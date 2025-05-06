@@ -1,19 +1,42 @@
 backend:
   name: github
   repo: "daslui/astroship"
-  branch: "main"
+  branch: "decapcms"
   base_url: https://cmsproxy.luisental.org
+media_folder: "src/assets/images" # Location where files will be stored in the repo
+public_folder: "src/assets/images" # The src attribute for uploaded media
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "src/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in frontmatter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Snippet", name: "snippet", widget: "hidden", default: "" }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "object",
+          fields:
+            [
+              {
+                label: "Image",
+                name: "src",
+                widget: "image",
+              },
+              { label: "Image Text (alt)", name: "alt", widget: "string" },
+            ],
+        }
+      - {
+          label: "Publish Date",
+          name: "publishDate",
+          widget: "datetime",
+          default: "{{now}}",
+          date_format: "YYYY-MM-DD",
+          time_format: "HH:mm",
+        }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: [], required: false }
       - { label: "Body", name: "body", widget: "markdown" }
-media_folder: "src/assets/images" # Location where files will be stored in the repo
-public_folder: "src/assets/images" # The src attribute for uploaded media
